@@ -1,0 +1,102 @@
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	box-sizing: border-box;
+  overflow-x: hidden; 
+	font-family: montserrat; 
+	font-size: 1.5em;
+}
+
+a{
+  text-decoration: none;
+  color: #444445;
+}
+
+.flex_row{
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap;
+}
+/* navigation bar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.navigation{
+  background: white; 
+  padding: 0 2rem;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+}
+
+.navigation .nav_menu{
+  justify-content: space-between;
+}
+
+.navigation .toggle_collapse{
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  display: none; 
+}
+
+.navigation .toggle_collapse .toggle_icon{
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 1rem;
+}
+
+
+.navigation .nav_title a{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  display: block;
+}
+
+.navigation .nav_items{
+  list-style-type: none;
+  display: flex; 
+  margin: 0;
+}
+
+.navigation .nav_items .nav_link{
+  padding: 1.6rem 1rem;
+}
+
+.navigation .nav_items .nav_link a:hover{
+  color: #9AA5A6;
+}
+.navigation .donate {
+  padding: 1rem 0;
+}
+
+button{
+  color: #FFFFFF;
+  background-color: #118AB2;
+  border: none;
+  padding: 10px 30px;
+  font-family: montserrat; 
+	font-size: .75em;
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
+  border-radius: 6px;
+}
+
+button:hover{
+  background-color: #114D74;
+  color: #ffffff;
+}
+/* responsive navbar 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (max-width: 750px){
+  .navigation .nav_menu, .navigation .nav_items{
+    flex-direction: column; 
+  }
+  .navigation .toggle_collapse{
+    display: initial; 
+  }
+}
